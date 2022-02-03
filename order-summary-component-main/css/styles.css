@@ -1,0 +1,125 @@
+/*Variables*/
+:root{
+    --paleblue:hsl(225, 100%, 94%);
+    --brightdesblue: hsl(245, 89%, 64%);
+    --brightblue: hsl(245, 75%, 52%);
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+}
+/*Globales*/
+html {
+    font-size: 62.5%; /*1rem = 10px*/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Red Hat Display', sans-serif;
+}
+h1,h2,h3{
+    color: var(--darkblue);
+}
+h1{ 
+    font-weight: 900;
+    font-size: 2.4rem;
+}
+h2{
+    margin: 0;
+    font-size: 1.8rem;
+}
+p{
+    color: var(--desblue);
+    margin: .5rem 0;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+.container{
+    width: 40rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+/*card*/
+body{
+    background-color: var(--paleblue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+}
+@media (min-width: 768px) { 
+    body{
+        background-image: url(../images/pattern-background-desktop.svg);
+    }
+}
+.card{
+    background-color: white;
+    margin-top: 7rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.card__image{
+    border-radius: 20px 20px 0 0;
+}
+.card__header{
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+.card__description{
+    line-height: 2;
+}
+.card__plan{
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__price{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card__change{
+    color: var(--brightblue);
+    cursor: pointer;
+    transition: color ease-in .3s;
+}
+.card__change:hover{
+    color: var(--brightdesblue);
+}
+.card__button{
+    border: none;
+    background-color: var(--brightblue);
+    padding: 1.2rem;
+    width: 90%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    color: var(--paleblue);
+    font-weight: 900;
+}
+.card__button:hover{
+    cursor: pointer;
+    background-color: var(--brightdesblue);
+    transition: background-color ease-in-out .2s;
+}
+.card__button--white{
+    background-color: var(--verypaleblue);
+    color: var(--desblue);
+}
+.card__button--white:hover{
+    color: var(--darkblue);
+    background-color: var(--verypaleblue);
+}
